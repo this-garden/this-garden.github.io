@@ -1,0 +1,118 @@
+body {
+  background-color: #f8faf2;
+  color: #3b3b3b;
+  font-family: lato, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.canvas-container {
+  background-image: url("./assets/screenshot-features.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+  position: fixed;
+  right: 40px;
+  top: 0;
+  width: calc(50% - 40px);
+}
+
+header,
+section {
+  padding: 40px;
+  justify-content: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  .container {
+    height: 100%;
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 40px;
+  }
+
+  p,
+  ul {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+
+  ul {
+    list-style-position: inside;
+    list-style-type: disc;
+  }
+}
+
+section {
+  min-height: 70vh;
+}
+
+header,
+.section-hero {
+  background-color: #eff2e6;
+}
+
+.section-hero {
+  column-gap: 40px;
+  display: grid;
+  grid-column-gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 60px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+.logo {
+  background-image: url("./assets/logo.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  margin-bottom: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+.inline-logo {
+  font-family: kansasnew, serif;
+  font-weight: 600;
+
+  span {
+    font-weight: 300;
+  }
+}
+
+.download-links {
+  a {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 200px;
+    margin-right: 40px;
+    text-indent: -9999px;
+    width: 200px;
+
+    &.ios {
+      background-image: url("./assets/app-store-badge.svg");
+    }
+
+    &.android {
+      background-image: url("./assets/google-play-badge.svg");
+    }
+  }
+}
