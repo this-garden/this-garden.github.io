@@ -1,34 +1,9 @@
 body {
-  background-color: #f8faf2;
+  background-color: #eff2e6;
   color: #3b3b3b;
   font-family: lato, sans-serif;
   font-style: normal;
   font-weight: 400;
-}
-
-.canvas-container {
-  background-image: url("./assets/screenshot-features.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 100vh;
-  position: fixed;
-  right: 40px;
-  top: 0;
-  width: calc(50% - 40px);
-}
-
-header,
-section {
-  padding: 40px;
-  justify-content: center;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-
-  .container {
-    height: 100%;
-  }
 
   h1 {
     font-size: 28px;
@@ -49,21 +24,19 @@ section {
   }
 }
 
+header {
+  padding: 40px 80px;
+}
+
 section {
-  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 80px;
 }
 
-header,
 .section-hero {
-  background-color: #eff2e6;
-}
-
-.section-hero {
-  column-gap: 40px;
-  display: grid;
-  grid-column-gap: 40px;
-  grid-template-columns: 1fr 1fr 1fr;
-
   h1 {
     font-size: 42px;
     font-weight: 800;
@@ -74,6 +47,35 @@ header,
     font-size: 18px;
     line-height: 1.6;
   }
+}
+
+.section-download {
+  background-color: #f8faf2;
+}
+
+.column-container {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+
+  .column {
+    width: 50%;
+  }
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.app-images {
+  background-image: url("./assets/screenshot-features.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
 }
 
 .logo {
@@ -114,5 +116,29 @@ header,
     &.android {
       background-image: url("./assets/google-play-badge.svg");
     }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  section {
+    min-height: 0;
+  }
+
+  .column-container {
+    flex-direction: column-reverse;
+
+    .column {
+      width: 100%;
+    }
+  }
+
+  .sticky {
+    position: static;
+  }
+
+  .app-images {
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 80%;
   }
 }
